@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ayushc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Startup Registration</title>
+
+
+
+        <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		
+		<!-- Call back function 2 -->
+		<script type="text/javascript">
+		function googleTranslateElementInit() {
+		  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+		}
+		</script>
+
+<style>
+    .gt{
+        margin-top: 20px;
+    }
+</style>
+
+</head>
+<body class="bod">
+    <div class="main">
+        <div class="mainsub1">
+            <div class="wel">
+                <span class="wo">Welcome to StartupINDIA</span>
+            </div>
+            <header class="h">Enabling Innovation-Driven Economy in INDIA</header>
+            <div class="para">
+                <p>It doesn't matter if you are a startup or an enabler, we open up opportunities for you in INDIA.</p>
+            </div>
+            <div id="google_translate_element" class="gt"></div>
+        </div>
+        <div class="mainsub2a">
+            
+            <div class="lab">
+                <h1>Register StartupINDIA</h1>
+                <span>Enter your details below to Register</span>
+            </div>
+            <div class="pro">
+                <label for="" class="l11">Profile Type</label>
+                <select class="dropdown">
+                    <option value="">Choose profile type </option>
+                    <option value="">Individual</option>
+                    <option value="">DPIIT Certified Startup</option>
+                    <option value="">Non DPIIT Certified Startup</option>
+                    <option value="">Incubator</option>
+                    <option value="">Accelerator</option>
+                    <option value="">Mentor</option>
+                </select>
+            </div>
+            <div class="inpu1">
+                <label for="" class="l1">Name</label>
+                <input type="text" class="ui1" id="name">
+            </div>
+            <div class="mob">
+                <label for="" class="l1">Mobile Number</label>
+                <input type="number" class="ui1" id="phone">
+            </div>
+            <div class="email">
+                <label for="" class="l1">E-mail Address</label>
+                <input type="text" class="ui1" id="email">
+            </div>
+            <div class="inpp1">
+                <label for="" class="l1">Password</label>    
+                <input type="password" id="postcode">
+            </div>
+                <input class="b1" type="submit" onclick="validation()">
+                <div class="at">
+                    <a href="#" class="a1">Login via Startup India</a>
+                </div>
+                <div class="for">
+                    Have an account?
+                    <a href="ayushsign.html" class="a2">login</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function validation() {
+  var mailformat = /^([a-zA_Z0-9]+)@([a-z0-9]+).([a-z]{2,8})$/;
+      email = document.getElementById("email").value;
+  var phoneno = /^\d{10}$/;
+  if (document.getElementById("name").value.length == 0) {
+    alert("enter the correct name")
+    return false;
+  }
+  if (document.getElementById("phone").value.length == 0) {
+    alert("enter the valid phone number")
+    return false;
+  }
+  var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+  /*if (document.getElementById("email").value.match(mailformat) != mailformat) {
+    alert("enter the valid email")
+    return false;
+  }*/
+  if (document.getElementById("postcode").value.length < 4) {
+    alert("enter strong password")
+    return false;
+  }
+  
+  return window.location="ayushsign.html";
+}
+
+</script>
+</html>

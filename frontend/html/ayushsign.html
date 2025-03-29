@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ayushc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Startup Login</title>
+
+
+    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		
+    <!-- Call back function 2 -->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script>
+
+<style>
+    .gt{
+        margin-top: 20px;
+    }
+</style>
+
+</head>
+<body class="bod">
+    <div class="main">
+        <div class="mainsub1">
+            <div class="wel">
+                <span class="wo">Welcome to Startup INDIA</span>
+            </div>
+            <header class="h">Enabling Innovation-Driven Economy in India</header>
+            <div class="para">
+                <p>It doesn't matter if you are a startup or an enabler, we open up opportunities for you in India.</p>
+            </div>
+            <div id="google_translate_element" class="gt"></div>
+        </div>
+        <div class="mainsub2">
+            <div class="lab">
+                <h1>Login StartupIndia</h1>
+                <span>Enter your details below to login</span>
+            </div>
+            <div class="inpu">
+                <label for="" class="l1">Username or E-mail</label>
+                <input type="text" class="ui1" id="email" placeholder="Enter email address" required>
+            </div>
+            <div class="inpp">
+                <label for="" class="l1" >Password</label>    
+                <input type="password" id="postcode" placeholder="Enter password" required>
+            </div>
+                <a href="#" class="b1" type="submit" onclick="validation()">Login</a>
+                <div class="at">
+                    <a href="#" class="a1">Login via Startup India</a>
+                </div>
+                <div class="for">
+                    <a href="#" class="a2">Forgot your password?</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function validation() {
+    var mailformat = /^([a-zA_Z0-9]+)@([a-z0-9]+).([a-z]{2,8})$/;
+    var email = document.getElementById("email").value;
+    var phoneno = /^\d{10}$/;
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+            if (document.getElementById("postcode").value.length < 4) {
+                alert("Enter the valid password")
+                return false;
+            }
+        }
+</script>
+</html>

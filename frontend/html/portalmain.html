@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Ayush Main Portal</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link rel="stylesheet" href="../css/portalmain.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		
+		<!-- Call back function 2 -->
+		<script type="text/javascript">
+		function googleTranslateElementInit() {
+		  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+		}
+		</script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        
+      }
+      .middle-text{
+        color: black;
+      }
+      .nav-item{
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .rounded-circle{
+        margin-left: -120px;
+      }
+      .sub3{
+            list-style-type: none;
+            display:none;
+            position: absolute;
+
+            border-radius: 3px;
+
+        }
+        .navbar-nav li:nth-child(3):hover .sub3{
+            display: block;
+            background-color: white;
+            padding: 10px;
+            color: black;
+            z-index: 1;
+        }
+        .sub3 li a:hover{
+            text-decoration: none;
+            color: blue;
+            background-color: white;
+            transform: scale(1.5);
+            transition: 2s linear infinite;      
+        }
+        .sub3 li a{
+            text-decoration: none;
+        }
+      
+        .sub4{
+            list-style-type: none;
+            display:none;
+            position: absolute;
+            border-radius: 3px;
+        }
+        .navbar-nav li:nth-child(4):hover .sub4{
+            display: block;
+            background-color: white;
+            padding: 10px;
+            color: black;
+            z-index: 1;
+        }
+        .sub4 li a:hover{
+            text-decoration: none;
+            color:blue;
+            background-color: white;
+            transform: scale(1.1);
+            transition: 0.1 ease;
+        }
+        .sub4 li a{
+            text-decoration: none;
+        }
+        
+        .sub40 li a{
+            text-decoration: none;
+        }
+        
+            
+        .hov{
+          padding: 30px;
+        }       
+        
+        
+        .hov:hover{
+          background-color: rgba(0, 0, 0, 0.177);
+          animation: ani 1s linear;
+          margin-top: -25px;
+          transition-duration: 1s;
+        }
+        
+        .btn{
+          border: none;
+          font-weight: 600;
+          color: black;
+          box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.177);
+          background-image: linear-gradient(45deg,green,lightgreen,green);
+        }
+        .btn:hover
+        {
+          transition-duration: 1s;
+          background-image: linear-gradient(45deg,lightgreen,green,lightgreen);
+        }
+        @media (max-width:400px) {
+          #i{
+            height: 300px;
+            width: 350px;
+          }
+        }
+        .nav-item{
+          padding-left: 0;
+          padding-right: 10;
+          padding-top: 3px;
+          padding-bottom: 3px;
+        }
+        .gt{
+          margin-top: 10px;
+        }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-weight: bold;">AYUSH INDIA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#aboutus">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">Schemes</a>
+            <ul class="sub3" >
+              <li><a href="#CSecS" style="color: black;">Central Sector Schemes</a></li>
+              <li><a href="#CSpnS" style="color: black;">Centrally Sponsored Schemes</a></li>
+            </ul>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ayush Login</a>
+              <ul class="sub4" >
+                <li><a href="#" style="color: black;">Stakeholders</a></li>
+                  <ul class="sub40" style="list-style-type: disc;">
+                    <li><a href="ayushreg.html" style="color: black;">Startup</a></li>
+                    <li><a href="inv and st.html" style="color: black;">Others</a></li>
+                  </ul>
+                <li><a href="gov.html" style="color: black;">Government agencies</a></li>
+                <li><a href="p.html" style="color: black;">Public users</a></li>
+              </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="resource.html">Resource</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../images/map_page-0001.jpg">Highlights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Exercise-And-Yoga-Tracker-master/aryoga.html">AR Yoga</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://ayush.com/">Products</a>
+          </li>
+          <li>
+            <div id="google_translate_element" class="gt"></div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" style="text-decoration-color: #000000;">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><img src="../images/a2.jpg" alt=""></svg>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Ayush System</h1>
+            <p>The Ministry of Ayush, a ministry of the Government of India, is responsible for developing education, research and propagation of traditional medicine systems in India.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><img src="../images/Ayush-Banner.jpg" alt=""></svg>
+
+        <div class="container">
+          <div class="carousel-caption middle-text">
+            <h1 style="color: white;"></h1>
+            <p style="color: white;"> </p>
+            <!--<p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>-->
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><img src="../images/a1.jpg" alt=""></svg>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative officers should take their work properly</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4 hov">
+          <svg class="bd-placeholder-img rounded-circle" width="120" height="120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="../images/am1.jpeg" alt=""><rect width="100%" height="100%" fill="#777"/></svg>
+          <h2>Ayurveda</h2>
+          <p>Ayurveda is the time tested traditional system of medicine of India. The term 'Ayurveda' meaning 'the knowledge of life' comprises of two Sanskrit words viz 'Ayu' meaning 'Life' and 'Veda' meaning 'Knowledge' or 'Science'.</p>
+          <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 hov">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="../images/am2.jpeg" alt=""><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <h2>Yoga & Naruropathy</h2>
+        <p>The word 'Yoga' comes from the Sanskrit word 'yuj' which means 'to unite or integrates'. Yoga is about the union of a person's own conciousness and the universal consciousness. Natureopathy is a cost effective drugless, non-invasive therapy involving the use of natural materials for health care and healthy living.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 hov">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="../images/am3.jpeg" alt=""><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <h2>Unani</h2>
+        <p>Unani System of medicine is a comprehensive medical system, which provides preventive, promotive, curative and rehabilitative health care. The system is holistic in nature and takes into account the whole personality of an individual rather than taking a reductionist approach townards disease.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4 hov">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="../images/am4.jpeg" alt=""><rect width="100%" height="100%" fill="#777"/></svg>
+    
+            <h2>Siddha</h2>
+            <p>The Siddha system is ancient system of medicine in India. The word 'Siddha' is derived from the root word 'Citti" meaning attainement of perfection, eternal bliss and accomplishment.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4 hov">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="../images/am5.jpeg" alt=""><rect width="100%" height="100%" fill="#777"/></svg>
+    
+            <h2>Sowa Rigpa</h2>
+            <p>Sowa-Rigpa” is the traditional medicine of many parts of the Himalayan region used mainly by the Tribal and bhot people. Sowa-Rigpa(Bodh-Kyi) means 'science of healing' and the practitioners of this medicine are known as Amchi.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4 hov">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><img src="../images/am6.jpeg" alt=""><rect width="100%" height="100%" fill="#777"/></svg>
+    
+            <h2>Homeopathy</h2>
+            <p>'Homoeopathy' was introduced as a scientific system of drug therapeutics by a German Physician, Dr. Christian Frederick Samuel Hahnemann in 1805. The principle of Homoeopathy is Similia Similibus Curentur i.e. let likes be trated by likes.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette" id="aboutus">
+      <div class="col-md-7" >
+        <h2 class="featurette-heading" >All about us, <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">The Ministry of Ayush was formed on the 9th of November 2014 with a vision of reviving the profound knowledge of our ancient systems of medicine and ensuring the optimal development and propagation of the Ayush systems of healthcare. Earlier, the Department of Indian System of Medicine and Homoeopathy (ISM&H) formed in 1995, was responsible for the development of these systems. It was then renamed as the Department of Ayurveda, Yoga, and Naturopathy, Unani, Siddha and Homoeopathy (Ayush) in November 2003 with focused attention towards education and research in Ayurveda, Yoga and Naturopathy, Unani, Siddha, and Homoeopathy.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false" style="margin-top: -500px;"><img src="../images/d1 (1).jpg" alt="" id="i"></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Shri Sarbananda Sonowal <span class="text-muted">Union Cabinet Minister, Ministry of Ayush</span></h2>
+        <p class="lead">Late Shri Jibeswar Sonowal, a BJP member, had a prominent political career in Assam, serving as an MLA and Lok Sabha member. He held ministerial positions, became Chief Minister in 2016, and later a Union Cabinet Minister overseeing Ayush and Ports, Shipping, and Waterways. He was born in Mulukgaon, Assam, on October 31, 1962, held LLB and B.C.J degrees, and remained unmarried.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false" style="margin-top: -500px;"><img src="../images/d4 (1).png" alt="" id="i"></svg>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Homoeopathy<span class="text-muted"> as a Career.</span></h2>
+        <p class="lead">A career in complementary and traditional systems of medicines is much in demand today. All across the country, many prestigious colleges of Homoeopathy, are run by the Ministry of Ayush and by the State governments or self-financed institutions. These impart recognised and formalised educational courses, training, and teaching in various courses of Homoeopathy. There is also a dedicated autonomous research organization running a Postgraduate course.</p>
+        
+      
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false" style="margin-top: -500px;"><img src="../images/d5 (1).jpeg" alt="" id="i"></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Traditional Food Recipes <span class="text-muted">from Ayush Systems.</span> </h2>
+        <p class="lead">India has a rich tradition of diverse food practices in different parts of the Country. Most of us are unaware of the treasure trove of culinary delights that has been passed down to us by our own ancestors. This compilation of recipes is a broad exploration into traditional systems of eating for health and nourishment, with added interpretation to place it in the context of our own time. It contains indicative general guidelines and therefore the users of the book may make necessary modifications in the recipes as per their own choice and availability of the ingredients in their region.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false" style="margin-top: -500px;"><img src="../images/d2 (1).png" alt="" id="i"></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Unani Formulations <span class="text-muted">for Building Disease Resistance</span></h2>
+        <p class="lead">Unani medicine is a traditional and non-conventional system of medicine that is being practised in India. It incorporates the use of herbal remedies, dietary practices and regimental therapies. The principle of recognizing the influence of surroundings on the state of health of the human being is significant to this system of healthcare.</p>
+        <p class="lead">1.Sharbat-e-Unnab</p>
+        <p class="lead">2.Triyak-e-Nazla</p>
+        <p class="lead">3.Habb-e-Bukhar:</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false" style="margin-top: -500px;"><img src="../images/d3 (1).png" alt="" id="i"></svg>
+      </div>
+    </div>
+
+    
+
+    <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
+
+
+
+
+<!-- ======= schemes Section ======= -->
+<section id="departments" class="services">
+  <div class="container">
+  
+   <div id="CSecS" class="section-title">
+     <h2>Ayush Schemes</h2>
+     <p>Central Sector Schemes</p>
+   </div>
+   <div class="row">
+     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+       <div class="icon-box">
+         
+         <h4><a href="#" id="Ayurgyan_sch" style="text-decoration: none;">Ayurgyan</a></h4>
+         <p class="SizeInc SizeDec" style="text-align:justify;">AYURGYAN Scheme has been approved for the period from the FY 2021-2022 to FY 2025-2026 for promoting education and research in the field of Ayush and to support Research & Innovation in Ayush by extra mural research and education in Ayush by providing academic activities., training, Capacity Building etc.<br>
+         <a href="#" style="color:black" data-toggle="modal" data-target="#myModalAyurgyan">Read more.</a></p>
+      <hr>	
+           
+          <a href="https://ngo.ayush.gov.in/" target="_blank"  class="btnScheme ext_webL"  >Apply here.</a>
+       
+  
+          <!--modal starts-->
+           <div class="modal" id="myModalAyurgyan">
+            <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+  
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Ayurgyan Yojana</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            
+            
+            
+              <div class="modal-body">
+              <div class="faq-list">
+              <div class="table-responsive-lg" style="overflow-y:auto; height:200px;">
+                <table class="table">
+                      <tr><th>Sl.No.</th><th>Component</th><th>Document</th></tr>
+                      <tr><th>1.</th><th> Capacity Building and Continuing Medical Education (CME) in Ayush. </th><th><a href="images/Schemes/ayurgyan/ayurgyan.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (978 KB)</a></th></tr>
+                      <tr><th>2.</th><th>Research and Innovation in Ayush </th><th><a href="images/Schemes/ayurgyan/ResearchAndInv.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (568 KB)</a></th></tr>
+                </table>
+                <br>
+                <br>
+                For more Information about CME <a href="http://www.ravdelhi.nic.in/" target="_blank" class="ext_webL"> Click here</a>
+              </div> 
+            </div>
+            </div>
+            
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+            
+            </div>
+            </div>
+            </div>
+  
+      </div>
+     </div>
+  
+     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+       <div class="icon-box">
+         
+         <h4><a href="#" id="Ayurswasthya_sch" style="text-decoration: none;">Ayurswasthya  </a></h4>
+         <p class="SizeInc SizeDec" style="text-align:justify;">Under the Centre of Excellence component of AYURSWASTHYA Yojana, financial assistance is provided to eligible individual organizations/institutes for establishing and upgrading their functions & facilities and/or for research &amp; development activities in Ayush.<br><a href="../pdfs/Ayurswasthya.pdf" target="_blank" style="color:black">Read more.<i class="fa fa-file-pdf"></i> (909 KB)</a></p>
+       <hr>
+      
+   <a href="https://ngo.ayush.gov.in/" target="_blank" class="btnScheme ext_webL" >Apply here.</a>
+       
+       <div class="modal" id="myModalAyurswasthya">
+           <div class="modal-dialog modal-xl">
+             <div class="modal-content">
+             
+               <!-- Modal Header -->
+               <div class="modal-header">
+                 <h4 class="modal-title">Ayurswasthya Yogana</h4>
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               
+               <!-- Modal body -->
+               
+               
+               
+                <!-- <div class="modal-body">
+                                    <p>
+                                    <ul>Ayurswasthya Yojana comprises of two main components:-
+  
+                            
+  
+                            
+  
+                           <li>          Centre of Excellence: Through this component it is envisaged to identify reputed institutions engaged in Ayush Education / Drug
+                           Development &amp; Research / Clinical Research etc. in Government/ Non-Government Non-profit and to support them to upgrade their functions and facilities to levels of excellence.</li>
+                            
+                           <li>      Public Health Initiatives: This component is basically developed to demonstrate efficacy of Ayush systems on different Public Health
+                           programmes and public health issues through Ayush intervention. So that, intervention can be taken up in large scale for implementation in National Health Programmes.</li>
+                                
+                                    </ul>
+                                    
+                                    
+                                    </p>
+               </div> -->
+               
+               
+               <!-- Modal footer -->
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+               </div>
+               
+             </div>
+           </div>
+         </div>
+                  
+                  
+      
+      
+       </div>
+     </div>
+  
+     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+       <div class="icon-box">
+         
+         <h4><a href="#" id="CSSS_sch" style="text-decoration: none;">Champion Services sector scheme</a></h4>
+         <p class="SizeInc SizeDec" style="text-align:justify;">The Champion Services Sector Scheme have been framed by Govt. of India to enhance Medical tourism in the country.The initiative will not only promote and propage Ayurveda, Yoga and other traditional systems of medicines but also expect to increase foot fall of International patients/tourists/visitors in the country.<br><a href="" style="color:black" data-toggle="modal" data-target="#myModalCS">Read more.</a></p>
+       <hr>
+       
+       <a href="https://ngo.ayush.gov.in/" target="_blank" class="btnScheme ext_webL" >Apply here.</a>
+       
+       <div class="modal" id="myModalCS">
+  <div class="modal-dialog modal-xl">
+  <div class="modal-content">
+  
+   <!-- Modal Header -->
+   <div class="modal-header">
+     <h4 class="modal-title">Guidelines of Champion Service</h4>
+     <button type="button" class="close" data-dismiss="modal">&times;</button>
+   </div>
+   
+   <!-- Modal body -->
+   <div class="modal-body">
+    <div class="faq-list">
+    <div class="table-responsive-lg" style="overflow-y:auto; height:150px;">
+       <table class="table">
+           <tr><th>Sl.No.</th><th>Subject</th><th>Document</th></tr>
+            <tr><th>1.</th><th>Central Sector Scheme for the Establishment of Ayush Super Specialty Hospitals/Day Care Centres for Medical Tourism under Champion Services Sector Scheme for Medical Value Travel.</th><th><a href="images/Schemes/championService/links/L13.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (455 KB)</a></th></tr>
+            <tr><th>2.</th><th> Guidelines for skill development </th><th><a href="images/Schemes/championService/links/L14En.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (4.95 MB)</a></th></tr>
+            <!-- <tr><th>2.</th><th> Curriculum for Saundarya Ayurveda </th><th><a href="images/Schemes/championService/links/L1.pdf" target="_blank">Click</a></th></tr>
+            <tr><th>3.</th><th>Curriculum for sensitizing Health Care Professionals on Ayurveda </th><th><a href="images/Schemes/championService/links/L2.pdf" target="_blank">Click</a></th></tr>				  -->
+           
+       </table>
+    </div> 
+   </div>
+   </div>
+   
+   <div class="modal-header">
+     <h4 class="modal-title">QP NOS courses for Skill Develpment </h4>
+     <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+   </div>
+    <div class="modal-body">
+    <div class="faq-list">
+    <div class="table-responsive-lg" style="overflow-y:auto; height:200px;">
+       <table class="table">
+            <tr><th>Sl.No.</th><th>Subject</th><th>Document</th></tr>
+            <tr><th>1.</th><th> Curriculum for Saundarya Ayurveda </th><th><a href="images/Schemes/championService/links/L1.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (74.3 KB)</a></th></tr>
+            <tr><th>2.</th><th>Curriculum for sensitizing Health Care Professionals on Ayurveda </th><th><a href="images/Schemes/championService/links/L2.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (164 KB)</a></th></tr>
+            <tr><th>3.</th><th> Curriculum for Research Methodology and Medical Statistics </th><th><a href="images/Schemes/championService/links/L3.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (179 KB)</a></th></tr>
+            <tr><th>4.</th><th> Curriculum for Prakriti Analyst </th><th><a href="images/Schemes/championService/links/L4.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (228 KB)</a></th></tr>
+            <tr><th>5.</th><th> Curriculum for Jara Sahayak (Elderly care giver) </th><th><a href="images/Schemes/championService/links/L5.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (244 KB)</a></th></tr>
+            <tr><th>6.</th><th> Curriculum for Emergency Management Course</th><th><a href="images/Schemes/championService/links/L6.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (146 KB)</a></th></tr>
+            <tr><th>7.</th><th> Curriculum for Cupping Therapy Assistant</th><th><a href="images/Schemes/championService/links/L7.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (297 KB)</a></th></tr>
+            <tr><th>8.</th><th>Curriculum for Dalk Therapy Assistant </th><th><a href="images/Schemes/championService/links/L8.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (277 KB)</a></th></tr>
+            <tr><th>9.</th><th> Foundation course in Yoga Science for wellness</th><th><a href="images/Schemes/championService/links/L9.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (289 KB)</a></th></tr>
+           <tr><th>10.</th><th>Panchakarma Paricharaka Basic Course </th><th><a href="images/Schemes/championService/links/L10.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (707 KB)</a></th></tr>
+           <tr><th>11.</th><th>Technical Assistant Course in Stree Prasuti Local Procedures </th><th><a href="images/Schemes/championService/links/L11.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (148 KB)</a></th></tr>
+           <tr><th>12.</th><th> Kshara Karma Technician Training Programme </th><th><a href="images/Schemes/championService/links/L12.pdf" target="_blank"><i class="fa fa-file-pdf"></i> (307 KB)</a></th></tr>
+           
+       </table>
+    </div> 
+   </div>
+   </div>
+   
+   
+   <!-- Modal footer -->
+   <div class="modal-footer">
+     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+   </div>
+   
+  </div>
+  </div>
+  </div>
+  
+     </div>
+     </div>
+  
+     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+       <div class="icon-box">
+         
+         <h4><a href="#" id="PoICo_sch" style="text-decoration: none;">Promotion of International Co-operation</a></h4>
+         <p class="SizeInc SizeDec" style="text-align:justify;">Central Sector Scheme for Promotion of International Co-operation (IC) in Ayush. To promote and strengthen awareness and interest about Ayush Systems of Medicine and to facilitate International promotion, development and recognition of Ayurveda, Yoga, Naturopathy, Unani, Siddha, Sowa-Rigpa and Homoeopathy.<br><a style="color:black" href="../pdfs/ic.pdf" target="_blank">Read more.<i class="fa fa-file-pdf"></i> (1.01 MB)</a></p>
+       <hr>
+      <a href="https://ngo.ayush.gov.in/" target="_blank" class="btnScheme ext_webL" >Apply here.</a>
+       
+      </div>
+     </div>
+  
+     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+       <div class="icon-box">
+         
+         <h4><a href="#" id="IEandC_sch" style="text-decoration: none;">Information, Eduction &amp; Communication</a></h4>
+         <p class="SizeInc SizeDec" style="text-align:justify;">Pursue activities in the areas of Information, Education and Communication to fulfill the mandate of „propagation” of Ayush‟ Systems of Healthcare, assigned to the Ministry in the Government of India (Allocation of Business) Rules 1961.<br><a style="color:black" href="../pdfs/iec.pdf" target="_blank">Read more.<i class="fa fa-file-pdf"></i> (409 KB)</a></p>
+       <hr>
+      <br><a href="https://ngo.ayush.gov.in/" target="_blank" class="btnScheme ext_webL" >Apply here.</a>
+       
+      </div>
+     </div>
+  
+     
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+       <div class="icon-box">
+         
+         <h4><a href="#" id="AOgea_sch" style="text-decoration: none;">Ayush Oushadhi gunvatha evum authpadan</a></h4>
+         <p class="SizeInc SizeDec" style="text-align:justify;">Regulation of Ayurveda, Siddha, Unani and Homoeopathic (ASU&H) medicines in India, are governed under the provisions of Drugs & Cosmetics Act, 1940 and the Rules made thereunder. The growth & development of traditional Indian and Homoeopathic medicines in the interest of public health is expected within the objective of making accessible, safe, effective and quality medicines to the people.<br><a style="color:black" href="../pdfs/aoushdhi.pdf" target="_blank">Read more.<i class="fa fa-file-pdf"></i> (456 KB)</a> </p>
+       <hr>
+      <a href="https://ngo.ayush.gov.in/" target="_blank" class="btnScheme ext_webL" >Apply here.</a>
+       
+      </div>
+     </div>
+     <div class="col-lg-3"></div>
+      <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4">
+       <div class="icon-box">
+        
+         <h4><a href="#" id="CDandSSM_sch" style="text-decoration: none;">Conservation development and Sustainable management of medicinal plants</a></h4>
+         <p class="SizeInc SizeDec" style="text-align:justify;">The Ministry of Ayush has established a National Medicinal Plant Board to promote development and cultivation of medicinal plants and to harmonise the development activities between several ministries/departments/organisations. The board has been implementing various schemes and policies for the MSMEs to grow, preserve and market the medicinal plants. Central Sector Scheme for Conservation, Development and Sustainable Management of Medicinal Plants is one such scheme launched by NMPB to focus on cultivation and protection of medicinal plants.<br><a style="color:black" href="../pdfs/ayurgyan.pdf" target="_blank"> Read more.<i class="fa fa-file-pdf"></i> (568 KB)</a></p>
+       <hr>
+      <a href="https://ngo.ayush.gov.in/" target="_blank" class="btnScheme ext_webL" >Apply here.</a>
+       
+      </div>
+     </div>
+      <div class="col-lg-3"></div>
+  
+   </div>
+  
+  <div id="CSpnS" class="section-title">
+  <br>
+  <br><p class="SizeInc SizeDec">Centrally Sponsored Schemes</p>
+     <h2></h2>
+     
+   </div>
+   
+   <div class="row">
+   
+   <div class="col-lg-2"></div>
+      <div class="col-lg-8 col-md-6 d-flex align-items-stretch mt-4">
+       <div class="icon-box">
+        
+         <h4><a href="#" id="NAM_sch" style="text-decoration: none;">National Ayush Mission(NAM)</a></h4>
+         <p class="SizeInc SizeDec" style="text-align:justify;">Ministry of Ayush is implementing the Centrally Sponsered Scheme of Nationl Ayush Mission ( NAM ) through States/UTs for providing better access to Ayush services by increasing in number of Ayush Hospital andDispensaries, upgradation of Ayush hospitals/dispensaries, operationalizationof Ayush Health and Wellness Centres by upgrading existing Ayush dispensaries and Sub Health Centres to provide comprehensive primary healthcare at grassroots level with focus on Ayush systems of medicine,mainstreaming of Ayush through co-location of Ayush facilities at PrimaryHealth Centres (PHCs), Community Health Centres (CHCs) &amp; District Hospital(DHs), ensure availability of Ayush drugs and trained manpower and Ayush Public Health programmes. NAM also aims at the improvement in quality of Ayush education through upgrading existing Ayush Educational Institutions and establishment of new Ayush Colleges in the States where availability of Ayush teaching institutions is inadequate in Government Sector.<br>
+         <a style="color:black" href="http://namayush.gov.in" target="_blank" class="ext_webL">Read more.</a> </p>
+       <hr>
+      
+      </div>
+     </div>
+      <div class="col-lg-2"></div>
+  
+   </div>
+  </div>
+  </section>
+  <style>
+      section {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  
+  .section-bg {
+    background-color: #f1f7fd;
+  }
+  
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: black;
+  }
+  
+  .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: lightgreen;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+  }
+  .departments {
+    overflow: hidden;
+  }
+  
+  .departments .nav-tabs {
+    border: 0;
+  }
+  
+  .departments .nav-link {
+    border: 0;
+    padding: 12px 15px 12px 0;
+    transition: 0.3s;
+    color: rgb(0, 0, 0);
+    border-radius: 0;
+    border-right: 2px solid #ebf1f6;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  
+  .departments .nav-link:hover {
+    color: darkgreen;
+  }
+  
+  .departments .nav-link.active {
+    color: darkgreen;
+    border-color: darkgreen;
+  }
+  
+  .departments .tab-pane.active {
+    -webkit-animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .departments .details h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c4964;
+  }
+  
+  .departments .details p {
+    color: #757575;
+  }
+  
+  .departments .details p:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 992px) {
+    .departments .nav-link {
+      border: 0;
+      padding: 15px;
+    }
+  
+    .departments .nav-link.active {
+      color: #fff;
+      background: darkgreen;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .services .icon-box {
+    text-align: center;
+    border: 1px solid #d5e1ed;
+    padding: 80px 20px;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .services .icon-box .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: green;
+    border-radius: 5px;
+    transition: all 0.3s ease-out 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+  }
+  
+  .services .icon-box .icon i {
+    color: #fff;
+    font-size: 28px;
+  }
+  
+  .services .icon-box .icon::before {
+    position: absolute;
+    content: "";
+    left: -8px;
+    top: -8px;
+    height: 100%;
+    width: 100%;
+    background: #badaf7;
+    border-radius: 5px;
+    transition: all 0.3s ease-out 0s;
+    transform: translateZ(-1px);
+  }
+  
+  .services .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .services .icon-box h4 a {
+    color: rgba(0, 0, 0, 0.733);
+  }
+  
+  .services .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .services .icon-box:hover {
+    background: rgba(0, 128, 0, 0.777);
+    border-color: rgba(0, 128, 0, 0.551);
+    font-size: 30px;
+
+  }
+  
+  .services .icon-box:hover .icon {
+    background: #fff;
+  }
+  
+  .services .icon-box:hover .icon i {
+    color: #1977cc;
+  }
+  
+  .services .icon-box:hover .icon::before {
+    background: #3291e6;
+  }
+  
+  .services .icon-box:hover h4 a,
+  .services .icon-box:hover p {
+    color: #fff;
+  }
+  .services .icon-box:hover h4{
+    
+    font-size: 30px;
+  }
+  .btnScheme {
+      border: none;
+      background: linear-gradient(45deg,green,lightgreen,green);
+      color: black;
+      width: 160px;
+      padding: 8px 8px;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      display: center;
+      font-size: 18px;
+      margin: 4px 2px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 1s;
+      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.578);
+  }
+  .btnScheme:hover{
+    background: linear-gradient(45deg,lightgreen,green,lightgreen);
+    color: white;
+  }
+  a {
+      color: #1977cc;
+      text-decoration: none;
+  }
+  a {
+      color: var(--bs-link-color);
+      text-decoration: underline;
+  }
+  
+  </style>
+
+
+
+
+
+    
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+ <!-- <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>-->
+</main>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+   
+   
+   
+    <footer>
+      <div class="f-item-con">
+          <div class="app-info ss">
+              <span class='app-name'>
+                  <span class='app-initial'>A</span>yush ministry
+              </span>
+              <p>We provides you with <strong>Well organised</strong> and <strong>friendly</strong> Website Designs.</p>
+          </div>
+          <div class="useful-links ss">
+              <div class="footer-title">Useful Links</div>
+              <ul>
+                  <li>Sign In</li>
+                  <li><a href="#aboutus" style="text-decoration: none; color:white ;">About Us</a></li>
+                  <li>Become an Affiliate</li>
+                  <li>Advertise with Us</li>
+                  <li>Terms and Conditions</li>
+              </ul>
+          </div>
+          <div class="help-sec  ss">
+              <div class="footer-title">Help</div>
+              <ul>
+                  <li>Help Me</li>
+                  <li>Feedback</li>
+                  <li>Report a Issue / Bug</li>
+              </ul>
+          </div>
+          <div class="g-i-t ss">
+              <div class="footer-title">Get in Touch</div>
+              <form action="/" method="post" class="space-y-2">
+                  <input type="text" name="g-name" class="g-inp" id="g-name" placeholder='Name' />
+                  <input type="email" name="g-email" class="g-inp" id="g-email" placeholder='Email' />
+                  <textarea type="text" name="g-msg" class="g-inp h-40 resize-none" id="g-msg"
+                      placeholder='Message...'></textarea>
+                  <button type="submit" class='f-btn'>Submit</button>
+              </form>
+          </div>
+      </div>
+      <div class='cr-con'>Copyright &copy; 2023 | Made by Elan</div>
+  </footer>
+ <style>
+  :root{
+    --theme-col: green;
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+footer{
+    background-color: #111010;
+    width: 100%;
+    margin: 0;
+}
+.ss{
+  padding-left: 20px;
+}
+.f-item-con{
+    padding: 1.5rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    
+}
+footer .app-name{
+    color: white;
+    border-left: 4px solid var(--theme-col);
+    padding-left: 1.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+.app-name .app-initial{
+    color: var(--theme-col);
+}
+footer .app-info p{
+    color: white;
+    padding-left: 1.65rem;
+}
+
+footer .footer-title{ 
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: white;
+    border-left: 4px solid var(--theme-col);
+    padding-left: 1.5rem;
+    height: fit-content;
+}
+footer ul{ 
+    padding-left: 1.75rem;
+    color: white;
+    font-size: 0.875rem/* 14px */;
+    line-height: 1.25rem;
+    margin-top: .5rem;
+}
+footer ul li{ 
+    margin: .25rem 0;
+    cursor: pointer;
+    color: #d4d4d4;
+    width: fit-content;
+}
+footer ul li:hover{
+    color: white;
+}
+footer .help-sec{
+    grid-column-start: 2;
+}
+footer .cr-con{
+    background-color: #232127;
+    color: white;
+    padding: 1rem 4rem;
+    text-align: center;
+}
+.g-i-t{
+    display: grid;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.g-i-t form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+form .g-inp{
+    padding: .25rem .5rem;
+    font-size: 16px;
+}
+.g-inp textarea{
+    height: 150px;
+}
+.f-btn{
+    padding: .25rem 1rem;
+    background-color: var(--theme-col);
+    border-radius: .25rem;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+}
+ </style>
+  </body>
+</html>

@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Album example · Bootstrap v5.0</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		
+		<!-- Call back function 2 -->
+		<script type="text/javascript">
+		function googleTranslateElementInit() {
+		  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+		}
+		</script>
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .tab {
+            display: none;
+        }
+        .active-tab {
+            display: block;
+        }
+        .my-2{
+            width: 200px;
+        }
+        .btn{
+            background-image: linear-gradient(45deg,green,lightgreen,green);
+            border: none;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.588);
+        }
+        .btn:hover{
+            background-image: linear-gradient(45deg,lightgreen,green,lightgreen);
+        }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted lead">Discover mentors, investors, and government projects that align with your goals. Our platform is your compass in a dynamic world, connecting you to the resources that matter. Unlock your venture's potential with Resource Selection."</p>
+          <div id="google_translate_element" class="gt"></div>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <strong>Resource</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="" style="font-weight: 400;">Resource selection</h1>
+        <p class="lead text-muted"> Navigate your path to success with precision. Discover mentors, investors, and government projects tailored to your needs, all in one place. Unlock the potential of your ventures.</p>
+        <p>
+          <button href="#" class="btn btn-primary my-2" onclick="showTab('tab1')">Mentors</button>
+          <button href="#" class="btn btn-primary my-2" onclick="showTab('tab2')">Investors</button>
+          <button href="#" class="btn btn-primary my-2" onclick="showTab('tab3')">Government Projects</button>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light tab" id="tab1">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="../images/m1.jpeg" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+              <h3>Dr. Vasant Lad</h3>
+              <p><strong>Credentials:</strong> Ayurvedic physician, author, and educator.</p>
+              <p><strong>Achievements:</strong> Renowned for his contributions to Ayurvedic education in the West. Founder of The Ayurvedic Institute in New Mexico, USA.</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+                <img src="../images/m2.jpeg" alt="" width="100%" height="250">
+            <div class="card-body">
+                <h3>Swanmi Ramdev</h3>
+                <p><strong>Credentials:</strong> Yoga guru and founder of Patanjali Ayurved Limited.</p>
+                <p><strong>Achievements:</strong> Popularized Yoga and Ayurveda through his teachings, television programs, and the Patanjali brand.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../images/m3.jpg" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+                <h3>Dr. P.Ram Manohar</h3>
+                <p><strong>Credentials:</strong> Ayurvedic physician and researcher.</p>
+                <p><strong>Achievements:</strong> Known for his research in Ayurveda, particularly in the field of Ayurvedic pharmacology. Served as the Director of the Amrita School of Ayurveda.</p>
+                <div class="d-flex justify-content-between align-items-center">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../images/m4.jpg" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+                <h3>Dr. S. Krishnamswamy</h3>
+                <p><strong>Credentials:</strong> Ayurvedic physician an researcher.</p>
+                <p><strong>Achievements:</strong> Known for his contributions to Ayurvedic research and publications on traditional medicine.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../images/m5.png" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+                <h3>Dr. Farokh J. Master</h3>
+                <p><strong>Credentials:</strong> Homeopathic physician and educator.</p>
+                <p><strong>Achievements:</strong> A prominent figure in the field of Homeopathy, known for his teaching and clinical expertise.</p>
+                <div class="d-flex justify-content-between align-items-center">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../images/m6.jpeg" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+                <h3>Dr. Sivananda Murty</h3>
+                <p><strong>Credentials:</strong> Ayurvedic physician and academic.</p>
+                <p><strong>Achievements:</strong> Has made contributions to Ayurvedic education and research. Known for his work in integrating scientific knowledge with Ayurveda.</p>
+                <div class="d-flex justify-content-between align-items-center">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="album py-5 bg-light tab" id="tab2">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../images/i1.jpg" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+              <p class="card-text"><h3>Shripad Yesso Naik</h3>Former Minister of State for Ayush in India, Mr. Naik played a crucial role in overseeing the development and promotion of traditional systems of medicine and healthcare, including Ayurveda, Yoga, Unani, Siddha, and Homeopathy.</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../images/i2.jpeg" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+              <p class="card-text"><h3>Rajesh Kotecha </h3>As the Secretary of the Ministry of Ayush, Mr. Kotecha was responsible for the ministry's administrative functions and policy implementation. He is well-regarded for his dedication to advancing the field of Ayurveda.</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../images/i3.jpeg" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+              <p class="card-text"><h3>Dr. Vaidya Rajesh Kotecha </h3>Dr. Kotecha held the position of Special Secretary (Ayurveda) within the Ministry of Ayush and is recognized for his extensive knowledge and contributions to the field of Ayurveda, particularly in research and education.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../images/i4.jpeg" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+              <p class="card-text"><h3>Dr. Manoj Nesari</h3> Dr. Manoj Nesari served as an Advisor to the Ministry of Ayush. He played a significant role in providing expert guidance and advice on matters related to traditional systems of medicine, contributing to the ministry's policy and program initiatives.</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../images/i5.jpg" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+              <p class="card-text"><h3>Dr. Raj Mani Pandey</h3>Dr. Raj Mani Pandey held the position of Joint Secretary (Ayurveda) within the Ministry of Ayush. In this role, he was responsible for overseeing and coordinating various Ayurveda-related programs and policies.</p>
+              <div class="d-flex justify-content-between align-items-center">
+               
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="../images/i6.jpg" alt="" width="100%" height="250"><rect width="100%" height="100%" fill="#55595c"/>
+
+            <div class="card-body">
+              <p class="card-text"><h3>Dr. Tanuja Nesari</h3>Dr. Tanuja Nesari was the Director of the All India Institute of Ayurveda (AIIA), a premier institute under the Ministry of Ayush. She played a crucial role in advancing Ayurvedic education, research, and healthcare practices</p>
+              <div class="d-flex justify-content-between align-items-center">
+              
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+<div class="album py-5 bg-light tab" id="tab3">
+    
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+    
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+    
+            th {
+                background-color: #f2f2f2;
+            }
+    
+            tr:hover {
+                background-color: #f5f5f5;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>Organization Name</th>
+                    <th>Theme</th>
+                    <th>Category</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Ministry of Ayush Data -->
+                <tr>
+                    <td>Ministry of Ayush</td>
+                    <td>Healthcare</td>
+                    <td>Alternative Medicine</td>
+                    <td>Promotion of Yoga and Ayurveda</td>
+                    <td>Promoting the benefits of Yoga and Ayurveda for holistic health and wellness.</td>
+                </tr>
+                <!-- Additional Data -->
+                <tr>
+                    <td>Department of Transportation</td>
+                    <td>Transportation</td>
+                    <td>Infrastructure</td>
+                    <td>Smart City Mobility</td>
+                    <td>Implementing a smart city mobility system to reduce traffic congestion and promote sustainable transportation.</td>
+                </tr>
+                <tr>
+                    <td>Ministry of Education</td>
+                    <td>Education</td>
+                    <td>Technology</td>
+                    <td>E-Learning Expansion</td>
+                    <td>Expanding online learning platforms to enhance access to education for all citizens.</td>
+                </tr>
+                <tr>
+                    <td>Healthcare Department</td>
+                    <td>Healthcare</td>
+                    <td>Public Health</td>
+                    <td>Telemedicine Services</td>
+                    <td>Establishing telemedicine services to improve healthcare access in rural areas.</td>
+                </tr>
+                <tr>
+                    <td>Startup InnovateTech</td>
+                    <td>Technology</td>
+                    <td>Software</td>
+                    <td>AI-Powered Chatbots</td>
+                    <td>Developing AI-powered chatbots for customer service and support across industries.</td>
+                </tr>
+                <tr>
+                    <td>GreenEco Solutions</td>
+                    <td>Environment</td>
+                    <td>Sustainability</td>
+                    <td>Waste Recycling Platform</td>
+                    <td>Creating a platform to connect waste recycling centers with individuals and businesses to promote sustainability.</td>
+                </tr>
+                <tr>
+                    <td>MediCareTech</td>
+                    <td>Healthcare</td>
+                    <td>Healthtech</td>
+                    <td>Personalized Health Apps</td>
+                    <td>Developing personalized health apps that provide tailored wellness recommendations and track health data.</td>
+                </tr>
+                <tr>
+                    <td>Urban Mobility Solutions</td>
+                    <td>Transportation</td>
+                    <td>Urban Mobility</td>
+                    <td>Electric Scooter Sharing</td>
+                    <td>Launching an electric scooter sharing service to improve urban mobility and reduce pollution.</td>
+                </tr>
+                <tr>
+                    <td>SmartAgroTech</td>
+                    <td>Agriculture</td>
+                    <td>Agtech</td>
+                    <td>Precision Agriculture</td>
+                    <td>Developing precision agriculture solutions using IoT and data analytics to optimize crop yields.</td>
+                </tr>
+                <tr>
+                    <td>EdTech Innovators</td>
+                    <td>Education</td>
+                    <td>Edtech</td>
+                    <td>AI-Powered Learning Assistants</td>
+                    <td>Building AI-powered learning assistants for personalized education and tutoring.</td>
+                </tr>
+                <tr>
+                    <td>CleanEnergy Innovations</td>
+                    <td>Energy</td>
+                    <td>Renewable Energy</td>
+                    <td>Advanced Wind Turbines</td>
+                    <td>Designing advanced wind turbines to harness wind energy more efficiently.</td>
+                </tr>
+                <tr>
+                    <td>FoodTech Solutions</td>
+                    <td>Agriculture</td>
+                    <td>Foodtech</td>
+                    <td>Vertical Farming</td>
+                    <td>Developing vertical farming systems for year-round, sustainable food production in urban areas.</td>
+                </tr>
+                <tr>
+                    <td>Artistic Creations</td>
+                    <td>Culture</td>
+                    <td>Arts</td>
+                    <td>Artistic Marketplace</td>
+                    <td>Creating an online marketplace for artists to showcase and sell their artwork.</td>
+                </tr>
+                <tr>
+                    <td>Fintech Innovate</td>
+                    <td>Finance</td>
+                    <td>Fintech</td>
+                    <td>Blockchain-Based Payment</td>
+                    <td>Developing a blockchain-based payment system for secure and efficient financial transactions.</td>
+                </tr>
+    
+                <tr>
+                    <td>Environmental Agency</td>
+                    <td>Environment</td>
+                    <td>Sustainability</td>
+                    <td>Clean Energy Initiative</td>
+                    <td>Promoting clean energy sources and reducing carbon emissions to combat climate change.</td>
+                </tr>
+                <!-- Additional Data -->
+                <tr>
+                    <td>Department of Housing and Urban Development</td>
+                    <td>Urban Development</td>
+                    <td>Housing</td>
+                    <td>Affordable Housing Project</td>
+                    <td>Creating affordable housing options for low-income families in urban areas.</td>
+                </tr>
+                <tr>
+                    <td>Department of Energy</td>
+                    <td>Energy</td>
+                    <td>Renewable Energy</td>
+                    <td>Solar Power Expansion</td>
+                    <td>Expanding solar power infrastructure to increase the use of renewable energy sources.</td>
+                </tr>
+                <tr>
+                    <td>Ministry of Agriculture</td>
+                    <td>Agriculture</td>
+                    <td>Food Security</td>
+                    <td>Food Distribution Network</td>
+                    <td>Establishing an efficient food distribution network to ensure food security for all citizens.</td>
+                </tr>
+                <tr>
+                    <td>Department of Culture and Arts</td>
+                    <td>Culture</td>
+                    <td>Arts</td>
+                    <td>Public Art Project</td>
+                    <td>Promoting public art installations to enhance cultural experiences in the city.</td>
+                </tr>
+                <tr>
+                    <td>Ministry of Finance</td>
+                    <td>Finance</td>
+                    <td>Economic Growth</td>
+                    <td>Small Business Support</td>
+                    <td>Providing financial support and incentives for small businesses to stimulate economic growth.</td>
+                </tr>
+                <tr>
+                    <td>Department of Technology</td>
+                    <td>Technology</td>
+                    <td>Digital Infrastructure</td>
+                    <td>Broadband Expansion</td>
+                    <td>Expanding broadband access to underserved rural areas to bridge the digital divide.</td>
+                </tr>
+            </tbody>
+        </table>
+    
+    
+
+</div>
+
+
+
+</main>
+
+
+
+
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                if (tab.id === tabId) {
+                    tab.classList.add('active-tab');
+                } else {
+                    tab.classList.remove('active-tab');
+                }
+            });
+        }
+    </script>
+
+
+
+
+<footer class="text-muted py-5">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Back to top</a>
+      </p>
+      <p class="mb-1">&copy; 2023 Resource Selection. All rights reserved.</p>
+      <p class="mb-0">Privacy Policy | Terms of Service | Contact Us</p>
+    </div>
+  </footer>
+
+  
+  </body>
+</html>

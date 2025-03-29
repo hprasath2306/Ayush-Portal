@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Dashboard Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+<link href="dashboard.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="../css/dashboard.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#" style="font-size: 16px; font-weight: bold; background-color: rgb(47, 47, 122);">USER PROFILE</a>
+ 
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link px-3"  style="background-color: rgb(47, 47, 122); color: white;" href="#">Sign out</a>
+    </div>
+  </div>
+</header>
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <button class="nav-link active" style="color: rgb(47, 47, 122);"aria-current="page" href="#">
+              <span data-feather="home"></span>
+              Home
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" href="#" onclick="showTab('tab1')">
+              <span data-feather="file"></span>
+              Products
+            </button>
+          </li>
+          <!--<li class="nav-item">
+            <button class="nav-link" href="#" onclick="showTab('tab2')">
+              <span data-feather="shopping-cart"></span>
+              Products
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" href="#" onclick="showTab('tab3')">
+              <span data-feather="users"></span>
+              Conferences
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" href="#" onclick="showTab('tab4')">
+              <span data-feather="bar-chart-2"></span>
+              Reports
+            </button>
+          </li>-->
+          <li class="nav-item">
+            <button class="nav-link" href="#" onclick="showTab('tab5')">
+              <span data-feather="layers"></span>
+              Idea Proposal
+            </buton>
+          </li>
+        </ul>
+        
+      </div>
+    </nav>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 tab" id="tab1" >
+        <div>
+          <div id="nav-search" style="left: 0px; right: 0px;">
+            <div id="nav-bar-left"></div>
+            <form id="nav-search-bar-form" accept-charset="utf-8" action="/s/ref=nb_sb_noss" class="nav-searchbar nav-progressive-attribute" method="GET" name="site-search" role="search">
+          
+              <div class="nav-left">
+                <div id="nav-search-dropdown-card">
+                  
+            <div class="nav-search-scope nav-sprite">
+              <div class="nav-search-facade" data-value="search-alias=aps">
+                <span id="nav-search-label-id" class="nav-search-label nav-progressive-content" style="width: auto;">All</span>
+                <i class="nav-icon"></i>
+              </div>
+              <label id="searchDropdownDescription" for="searchDropdownBox" class="nav-progressive-attribute" style="display:none">Select the department you want to search in</label>
+              <select aria-describedby="searchDropdownDescription" class="nav-search-dropdown searchSelect nav-progressive-attrubute nav-progressive-search-dropdown" data-nav-digest="yEUBJoU3pm/EETBZjEB+fZs46n4=" data-nav-selected="0" id="searchDropdownBox" name="url" style="display: block; top: 2.5px;" tabindex="0" title="Search in">
+                  <option selected="selected" value="search-alias=aps">All Categories</option>
+                  <option value="search-alias=alexa-skills">Alexa Skills</option>
+                  <option value="search-alias=amazon-devices">Amazon Devices</option>
+                  <option value="search-alias=fashion">Amazon Fashion</option>
+                  <option value="search-alias=amazon-pharmacy">Amazon Pharmacy</option>
+                  <option value="search-alias=appliances">Appliances</option>
+                  <option value="search-alias=mobile-apps">Apps &amp; Games</option>
+                  <option value="search-alias=audible">Audible Audiobooks</option>
+                  <option value="search-alias=baby">Baby</option>
+              </select>
+            </div>
+          
+                </div>
+              </div>
+              <div class="nav-fill">
+                <div class="nav-search-field ">
+                  <label for="twotabsearchtextbox" style="display: none;">Ayush.in</label>
+                  <input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="Search" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Ayush.in" spellcheck="false">
+                </div>
+                <div id="nav-iss-attach"></div>
+              </div>
+              <div class="nav-right">
+                <div class="nav-search-submit nav-sprite">
+                  <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite nav-progressive-attribute" aria-label="Go">
+                    <input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go" tabindex="0">
+                  </span>
+                </div>
+              </div>
+            <input type="hidden" id="isscrid" name="crid" value="2LHHXVE90XJVK"><input type="hidden" id="issprefix" name="sprefix" value=",aps,214"></form>
+          </div>
+          <h1 style="color: white;">IN PROGRESS</h1>
+        </div>
+    </main>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 tab" id="tab2" >
+        <div>
+            <h1>s</h1>
+        </div>
+    </main>
+    
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 tab" id="tab3" >
+        <div>
+            <h1>s</h1>
+        </div>
+    </main>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 tab" id="tab4" >
+        <div>
+            <h1>s</h1>
+        </div>
+    </main>
+
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 tab" id="tab5" >
+        <h1>Startup Idea Proposal Form</h1>
+    <form action="process_proposal.php" method="POST">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="startup_name">Problem Description:</label><br>
+        <textarea id="startup_name" name="startup_name" rows="4" cols="50"></textarea><br><br>
+        
+        <label for="idea_description">Idea Description:</label><br>
+        <textarea id="idea_description" name="idea_description" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="investment_amount">Investment Amount:</label>
+        <input type="number" id="investment_amount" name="investment_amount" required><br><br>
+        
+        <label for="pitch_video">Pitch Video URL:</label>
+        <input type="url" id="pitch_video" name="pitch_video"><br><br>
+        
+        <label for="additional_info">Additional Information:</label><br>
+        <textarea id="additional_info" name="additional_info" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Submit Proposal" style="background-color:  rgb(47, 47, 122);">
+    </form>
+<style>
+    /* Apply styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.px-md-4{
+    background-image: url('../images/vickholius-nugroho-jt6QxZwSOCQ-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* Style the header */
+h1 {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 0;
+}
+
+/* Style the form container */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.904);
+    border-radius: 5px;
+}
+
+/* Style labels and input fields */
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style the submit button on hover */
+input[type="submit"]:hover {
+    background-color: #555;
+}
+.nav-searchbar{
+    width: auto;
+    display: flex;
+    position: static;
+    float: none;
+    flex: 1 1 auto;
+    padding: 10px 4px 10px 3px;
+    height: 60px;
+    left: 0px;
+    right: 0px;
+}
+
+   .nav-left{
+    font-family: inherit;
+    line-height: 1em;
+    font-size: 14px;
+    white-space: nowrap;
+    width: auto;
+    box-sizing: border-box;
+    top: -5px;
+    height: auto;
+    display: flex;
+    position: static;
+    float: none;
+   }
+</style>
+    </main>
+
+
+
+
+
+  </div>
+</div>
+
+
+<style>
+    .tab {
+            display: none;
+        }
+        .active-tab {
+            display: block;
+        }
+        .tab1{
+          width: 100%;
+          height: 500px;
+        }
+</style>
+
+
+<script>
+    function showTab(tabId) {
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            if (tab.id === tabId) {
+                tab.classList.add('active-tab');
+            } else {
+                tab.classList.remove('active-tab');
+            }
+        });
+    }
+</script>
+
+
+
+
+    <script src="dashboard.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+  </body>
+</html>

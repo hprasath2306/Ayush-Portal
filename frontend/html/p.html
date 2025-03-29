@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public User Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
+    
+    
+  
+
+
+
+</head>
+<body>
+    <h1 style="font-size: 40px;">PUBLIC USER</h1>
+    <div class="dm">
+        <main class="form-signin">
+            <form>
+                <h1 class="h3 mb-3 fw-normal">Login</h1>
+                <hr>
+                <br>
+                <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+                </div>
+                <br>
+                <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+                </div>
+                <br>
+                <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me</label>
+                </div>
+                <br>
+                <div class="bt">
+                        <a href="userprofile.html" class="w-100 btn btn-lg btn-primary" style="text-decoration: none;">Signin</a>
+                </div>
+            </form>
+            </main>
+            <main class="form-signin tp">
+                <form>
+                    <h1 class="h3 mb-3 fw-normal">Register</h1>
+                    <hr>
+                    <div class="s">
+                        <h3>Create an account with AYUSH NEXT</h3>
+                    </div>
+                    <div class="s">
+                        <p>Connect, share and react with peoople of AYUSH NEXT across India.</p>
+                    </div>
+                    <div class="bt">
+                        <a href="p_signup.html" class="w-100 btn btn-lg btn-primary" style="text-decoration: none;">Sign up</a>
+                    </div>
+
+                </form>
+                </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> 
+
+</body>
+<style>
+    body{
+        font-family: 'Crimson Text', serif;
+        font-family: 'Montserrat', sans-serif;
+        background-image: linear-gradient(rgb(184, 203, 255),rgb(255, 255, 255));
+        background-repeat: no-repeat;
+        height: 900px;
+        margin: 0;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        font-family: 'Crimson Text', serif;
+        font-family: 'Montserrat', sans-serif;
+    }
+   .s{
+    padding: 8px;
+   }
+   .tp{
+    margin-top: -17px;
+   }
+    .form-floating{
+        display: flex;
+        padding: 8px;
+        flex-direction: column-reverse;
+    }
+    .form-control{
+        height: 25px;
+        border: none;
+        outline: none;
+        border-style: solid;
+        border-top: transparent;
+        border-right: transparent;
+        border-left: transparent;
+        border-bottom-color:  aliceblue;
+    }
+    label{
+        font-weight: bold;
+    }
+   button{
+    width: 80px;
+    height: 30px;
+    outline: none;
+    color: #fff;
+    border-radius: 8px;
+    background-color: rgb(58, 58, 131);
+   }
+   button:hover{
+    background-color:red;
+    border: none;
+    color: #fff;
+    box-shadow: 1px 1px 5px white;
+    transition-duration: 1s;
+    
+   }
+   a{
+    width: 80px;
+    height: 30px;
+    outline: none;
+    color: #fff;
+    border-radius: 8px;
+    background-color: rgb(58, 58, 131);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+   }
+   a:hover{
+    background-color:red;
+    border: none;
+    color: #fff;
+    box-shadow: 1px 1px 5px white;
+    transition-duration: 1s;
+   }
+    .dm{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.862);
+        box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.575);
+        border-radius: 10px;
+        
+    }
+    .bt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-signin{
+        width: 250px;  
+        padding: 30px;
+        
+    }
+    @media screen and (max-width:768px) {
+        body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .dm{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 790px;
+        }
+    }
+</style>
+</html>

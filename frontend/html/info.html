@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Startup Idea Proposal</title>
+   
+</head>
+<body>
+    <h1>Startup Idea Proposal Form</h1>
+    <form action="process_proposal.php" method="POST">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="startup_name">Problem Description:</label><br>
+        <textarea id="startup_name" name="startup_name" rows="4" cols="50"></textarea><br><br>
+        
+        <label for="idea_description">Idea Description:</label><br>
+        <textarea id="idea_description" name="idea_description" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="investment_amount">Investment Amount (USD):</label>
+        <input type="number" id="investment_amount" name="investment_amount" required><br><br>
+        
+        <label for="pitch_video">Pitch Video URL:</label>
+        <input type="url" id="pitch_video" name="pitch_video"><br><br>
+        
+        <label for="additional_info">Additional Information:</label><br>
+        <textarea id="additional_info" name="additional_info" rows="4" cols="50"></textarea><br><br>
+        
+        <input type="submit" value="Submit Proposal">
+    </form>
+</body>
+<style>
+    /* Apply styles to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+h1 {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Style the form container */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Style labels and input fields */
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style the submit button on hover */
+input[type="submit"]:hover {
+    background-color: #555;
+}
+</style>
+</html>

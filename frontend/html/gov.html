@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gov.css">
+
+
+
+    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		
+    <!-- Call back function 2 -->
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script>
+
+
+
+
+</head>
+<body>
+    <div class="gmain">
+        <div class="logo">
+            <img src="../images/gov.jpeg" alt="">
+        </div>
+        <div class="gmain2">
+            <h1>Log In to your MyGov account</h1>
+            
+                <input type="text" class="gi11"placeholder="E-mail/Mobile (Log in with OTP)">
+                <input type="submit" class="s" placeholder="Log in with OTP">
+            
+            <hr>
+            <input type="text" placeholder="E-mail/Mobile">
+            <input type="password" placeholder="Password">
+            <a href="#">Forget your password?</a>
+            <input type="submit" class="s"placeholder="Log in with password">
+            <hr>
+            <h3>Login with Parichay / MeriPehchaan / Social Profile</h3>
+            <div id="google_translate_element" class="gt"></div>
+        </div>
+    </div>
+</body>
+<style>
+    body{
+    font-family: 'Crimson Text', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+img{
+    height: 90px;
+}
+.gmain{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gmain2{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 30px;
+}
+input{
+    height: 40px;
+    margin-top: 20px;
+}
+h1{
+    font-size: 18px;
+    font-weight: bold;
+}
+h3{
+    font-size: 15px;
+    margin-top: -20px;
+    text-align: center;
+    background-color: white;
+    width:fit-content;
+    margin-left: 32px;
+
+}
+hr{
+    width: 100%;
+    height: 2px;
+    border: none;
+    margin-top: 25px;
+    background-color: black;
+}
+::placeholder{
+    font-size: 15px;
+    font-weight: 600;
+}
+a{
+    margin-top: 15px;
+    text-decoration: none;
+
+}
+
+.s{
+    background-color:#203772;
+    color: white;
+    border-radius: 3px;
+    height: 40px;
+    border: none;
+}
+@media (max-width:400px) {
+    .gmain{
+        width: 100%;
+        padding: 20px;
+    }
+}
+</style>
+</html>
