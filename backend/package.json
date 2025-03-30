@@ -1,5 +1,21 @@
 {
+  "name": "ayush-api",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "migrate": "prisma migrate dev"
+  },
   "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "express": "^4.21.2",
     "init": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.14",
+    "nodemon": "^3.1.9",
+    "prisma": "^6.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }
