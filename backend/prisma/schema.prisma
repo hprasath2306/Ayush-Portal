@@ -6,3 +6,51 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+enum UserRole {
+  PUBLIC_USER
+  GOVERNMENT_AGENCY
+  INVESTOR
+}
+
+enum ProposalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model User {
+  id        String    @id @default(uuid())
+  email     String    @unique
+  password  String
+  fullName  String
+  role      UserRole
+
+  proposals Proposal[] @relation("UserProposals")
+  approvals Proposal[] @relation("AgencyApprovals")
+
+  @@map("users")
+}
+
+model Proposal {
+  id                  String          @id @default(uuid())
+  userId              String
+  fullName            String
+  email               String
+  problemDescription  String
+  ideaDescription     String
+  investmentAmount    Float
+  pitchVideoUrl       String?
+  additionalInfo      String?
+  status              ProposalStatus  @default(PENDING)
+  governmentAgencyId  String?         // ID of the government agency that approves/rejects
+  approvedAt          DateTime?
+  rejectedAt          DateTime?
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt()
+
+  user               User @relation("UserProposals", fields: [userId], references: [id])
+  governmentAgency   User? @relation("AgencyApprovals", fields: [governmentAgencyId], references: [id])
+
+  @@map("proposals")
+}
