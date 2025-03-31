@@ -1,8 +1,11 @@
 {
   "name": "ayush-api",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "node --import=tsx --env-file=.env --watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
     "migrate": "prisma migrate dev"
   },
   "dependencies": {
