@@ -1,6 +1,21 @@
 import { Request, Response } from "express";
 import prisma from "../prisma/prisma";
 
+//getAllPropsals
+export const getAllProposals = async (req: Request, res: Response) => {
+  try {
+    const proposals = await prisma.proposal.findMany({
+      where: {
+        userId: req.user.id,
+      },
+    });
+    res.json(proposals);
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ message: "Error fetching proposals" });
+  }
+};
+
 export const createProposal = async (req: Request, res: Response) => {
   try {
     const { fullName, email, problemDescription, ideaDescription, investmentAmount, pitchVideoUrl, additionalInfo } =
@@ -21,6 +36,7 @@ export const createProposal = async (req: Request, res: Response) => {
 
     res.json(proposal);
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: "Error creating proposal" });
   }
 };
