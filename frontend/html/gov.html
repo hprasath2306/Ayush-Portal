@@ -4,116 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Government Login</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Montserrat:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="gov.css">
 
-
-
+    <!-- Google Translate -->
     <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		
-    <!-- Call back function 2 -->
     <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-    }
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
     </script>
-
-
-
-
 </head>
 <body>
     <div class="gmain">
         <div class="logo">
-            <img src="../images/gov.jpeg" alt="">
+            <img src="../images/gov.jpeg" alt="Government Logo">
         </div>
         <div class="gmain2">
             <h1>Log In to your MyGov account</h1>
-            
-                <!-- <input type="text" class="gi11"placeholder="E-mail/Mobile (Log in with OTP)">
-                <input type="submit" class="s" placeholder="Log in with OTP">
-            
-            <hr> -->
-            <input type="text" placeholder="E-mail/Mobile">
-            <input type="password" placeholder="Password">
-            <!-- <a href="#">Forget your password?</a> -->
-            <input type="submit" class="s"placeholder="Log in with password">
+
+            <form id="login-form">
+                <input type="text" id="email" placeholder="E-mail/Mobile" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="submit" class="s" value="Log in with password">
+                <p id="login-message"></p>
+            </form>
+
             <hr>
             <h3>Login with Parichay / MeriPehchaan / Social Profile</h3>
             <div id="google_translate_element" class="gt"></div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const messageElement = document.getElementById("login-message");
+
+            messageElement.textContent = "";
+            messageElement.style.color = "red";
+
+            try {
+                const response = await fetch("http://localhost:5000/auth/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    localStorage.setItem("token", result.token); 
+                    localStorage.setItem("user", JSON.stringify(result.user));
+                    messageElement.style.color = "green";
+                    messageElement.textContent = "Login successful! Redirecting...";
+                    setTimeout(() => window.location.href = "gov-dashboard.html", 1500);
+                } else {
+                    throw new Error(result.message || "Invalid credentials");
+                }
+            } catch (error) {
+                messageElement.textContent = error.message;
+            }
+        });
+    </script>
 </body>
+
 <style>
-    body{
-    font-family: 'Crimson Text', serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto', sans-serif;
-}
-img{
-    height: 90px;
-}
-.gmain{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.gmain2{
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 30px;
-}
-input{
-    height: 40px;
-    margin-top: 20px;
-}
-h1{
-    font-size: 18px;
-    font-weight: bold;
-}
-h3{
-    font-size: 15px;
-    margin-top: -20px;
-    text-align: center;
-    background-color: white;
-    width:fit-content;
-    margin-left: 32px;
-
-}
-hr{
-    width: 100%;
-    height: 2px;
-    border: none;
-    margin-top: 25px;
-    background-color: black;
-}
-::placeholder{
-    font-size: 15px;
-    font-weight: 600;
-}
-a{
-    margin-top: 15px;
-    text-decoration: none;
-
-}
-
-.s{
-    background-color:#203772;
-    color: white;
-    border-radius: 3px;
-    height: 40px;
-    border: none;
-}
-@media (max-width:400px) {
-    .gmain{
-        width: 100%;
-        padding: 20px;
+    body {
+        font-family: 'Crimson Text', serif;
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
-}
+    img {
+        height: 90px;
+    }
+    .gmain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gmain2 {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 30px;
+    }
+    input {
+        height: 40px;
+        margin-top: 20px;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    h1 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 15px;
+        margin-top: -20px;
+        text-align: center;
+        background-color: white;
+        width: fit-content;
+        margin-left: 32px;
+    }
+    hr {
+        width: 100%;
+        height: 2px;
+        border: none;
+        margin-top: 25px;
+        background-color: black;
+    }
+    ::placeholder {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    a {
+        margin-top: 15px;
+        text-decoration: none;
+    }
+    .s {
+        background-color: #203772;
+        color: white;
+        border-radius: 3px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .s:hover {
+        background-color: #1a2d5a;
+    }
+    #login-message {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    @media (max-width: 400px) {
+        .gmain {
+            width: 100%;
+            padding: 20px;
+        }
+    }
 </style>
 </html>

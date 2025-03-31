@@ -16,6 +16,17 @@ export const getAllProposals = async (req: Request, res: Response) => {
   }
 };
 
+//getEveryProposals without any id everything in the db
+export const getEveryProposals = async (req: Request, res: Response) => {
+  try {
+    const proposals = await prisma.proposal.findMany();
+    res.json(proposals);
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ message: "Error fetching proposals" });
+  }
+}
+
 export const createProposal = async (req: Request, res: Response) => {
   try {
     const { fullName, email, problemDescription, ideaDescription, investmentAmount, pitchVideoUrl, additionalInfo } =
