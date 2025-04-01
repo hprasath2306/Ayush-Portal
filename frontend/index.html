@@ -181,6 +181,20 @@
                 <ul class="sub3">
                   <li><a href="#CSecS" style="color: black;">Central Sector Schemes</a></li>
                   <li><a href="#CSpnS" style="color: black;">Centrally Sponsored Schemes</a></li>
+                  <!--<style>
+                    .sub3 li a {
+                        display: block;
+                        padding: 10px 15px;
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    .sub3 li a:hover {
+                        background-color: rgba(17, 227, 150, 0.3); /* Blue background */
+                        border-radius: 12px;
+                        box-shadow: 4px 0px 10px rgba(10, 153, 86, 0.5); /* Horizontal shadow */
+                    }
+                  </style>-->
                 </ul>
               </li>
               <li class="nav-item">
@@ -189,8 +203,60 @@
                   <li><a href="html/inv and st.html" style="color: black;">Investors</a></li>
                   <li><a href="html/gov.html" style="color: black;">Government agencies</a></li>
                   <li><a href="html/p.html" style="color: black;">Public users</a></li>
+                  <!--<style>
+                    .sub4 li a {
+                        display: block;
+                        padding: 10px 15px;
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    .sub4 li a:hover {
+                        background-color: rgba(17, 227, 150, 0.3); /* Blue background */
+                        border-radius: 12px;
+                        box-shadow: 4px 0px 10px rgba(10, 153, 86, 0.5); /* Horizontal shadow */
+                    }
+                  </style>-->
                 </ul>
               </li>
+              <style>
+                /* Common styles for sub3 and sub4 */
+                .sub3, .sub4 {
+                  list-style-type: none;
+                  display: none;
+                  position: absolute;
+                  background-color: white;
+                  border-radius: 8px;
+                  padding: 0; /* Remove extra padding */
+                  margin: 0; /* Remove default margin */
+                  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                  width: max-content; /* Ensure dropdown width is based on content */
+                  z-index: 10; /* Ensure it appears above other elements */
+                }
+              
+                /* Show dropdown on hover */
+                .nav-item:hover .sub3,
+                .nav-item:hover .sub4 {
+                  display: block;
+                }
+              
+                /* Styles for dropdown links */
+                .sub3 li a, .sub4 li a {
+                  display: block;
+                  padding: 10px 15px;
+                  text-decoration: none;
+                  color: black;
+                  border-radius: 8px; /* Consistent border radius */
+                  transition: background-color 0.3s ease; /* Smooth hover effect */
+                }
+              
+                /* Hover effect for dropdown links */
+                .sub3 li a:hover, .sub4 li a:hover {
+                  background-color: rgba(17, 227, 150, 0.3); /* Light green background */
+                  text-decoration: none; /* Prevent underline */
+                  color: black; /* Ensure text color remains consistent */
+                }
+              </style>
               <li class="nav-item">
                 <a class="nav-link" href="html/dashboard.html">Dashboard</a>
               </li>
