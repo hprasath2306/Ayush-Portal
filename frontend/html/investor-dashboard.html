@@ -5,11 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investor Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Set the navbar background to plain.jpeg */
+        header.navbar {
+            background-image: url('../images/plain.jpeg'); /* Correct path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Add shadow and elevation to the proposal cards */
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 10px; /* Rounded corners */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+        }
+
+        .card:hover {
+            transform: translateY(-5px); /* Slight elevation on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+        }
+    </style>
 </head>
 <body>
 
 <header class="navbar navbar-dark bg-dark p-3">
-    <a class="navbar-brand" href="#">Investor Dashboard</a>
+    <a class="navbar-brand" href="#" style="color: black;">Investor Dashboard</a>
     <button class="btn btn-danger" onclick="logout()">Sign Out</button>
 </header>
 

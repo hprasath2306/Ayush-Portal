@@ -11,17 +11,17 @@
     
     <link rel="stylesheet" href="gov.css">
 
-    <!-- Google Translate -->
+    <!-- Google Translate 
     <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
         }
-    </script>
+    </script>-->
 </head>
 <body>
     <div class="gmain">
-        <div class="logo">
+        <div class="logo" style="align-items: center; margin-top: 120px;">
             <img src="../images/gov.jpeg" alt="Government Logo">
         </div>
         <div class="gmain2">
@@ -78,6 +78,12 @@
         font-family: 'Crimson Text', serif;
         font-family: 'Montserrat', sans-serif;
         font-family: 'Roboto', sans-serif;
+        background-image: url('../images/Gov_Login.jpg'); /* Add the background image */
+        background-size: cover; /* Ensure the image covers the entire page */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent the image from repeating */
+        height: 100vh; /* Ensure the body covers the full viewport height */
+        margin: 0; /* Remove default margin */
     }
     img {
         height: 90px;
@@ -93,6 +99,9 @@
         flex-direction: column;
         text-align: center;
         margin-top: 30px;
+        background-color: rgba(255, 255, 255, 0.8); /* Add a translucent background for better readability */
+        padding: 20px;
+        border-radius: 10px;
     }
     input {
         height: 40px;
