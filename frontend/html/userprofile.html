@@ -7,8 +7,42 @@
   <title>Startup Proposals</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
   <style>
+    #submitProposal {
+      background-image: url('../images/plain.jpeg'); /* Correct path to your image */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      border-radius: 10px;
+      color: black; /* Adjust text color for contrast */
+      min-height: 100vh; /* Ensure the section covers the full viewport height */
+      position: relative; /* Ensure proper stacking context */
+      box-sizing: border-box; /* Include padding and border in width/height calculations */
+    }
+
+    /* Translucent overlay for the #submitProposal div */
+    #submitProposal::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+      border-radius: 10px; /* Match the border radius of the parent */
+      z-index: 1; /* Place it below the content */
+    }
+
+    /* Ensure content inside #submitProposal is above the translucent overlay */
+    #submitProposal > * {
+      position: relative;
+      z-index: 2; /* Ensure content is above the translucent overlay */
+    }
+
     body {
       display: flex;
+      margin: 0; /* Remove default margin to prevent scrolling */
+      overflow: hidden; /* Prevent unnecessary scrolling */
     }
 
     .sidebar {
@@ -37,7 +71,35 @@
     .content {
       margin-left: 270px;
       padding: 20px;
-      width: 100%;
+      width: calc(100% - 270px);
+      box-sizing: border-box;
+      overflow-y: auto; /* Allow scrolling only for the content area */
+      height: 100vh; /* Ensure the content area fits the viewport height */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 200px; /* Adjust sidebar width for smaller screens */
+      }
+
+      .content {
+        margin-left: 220px; /* Adjust content margin for smaller screens */
+        width: calc(100% - 220px); /* Adjust content width for smaller screens */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .sidebar {
+        position: static; /* Stack sidebar above content */
+        width: 100%; /* Full width for sidebar */
+        height: auto; /* Adjust height */
+      }
+
+      .content {
+        margin-left: 0; /* No margin for content */
+        width: 100%; /* Full width for content */
+      }
     }
 
     .tab-content {
@@ -130,11 +192,38 @@
     .btn-watch:hover {
       background: #0056b3;
     }
+
+    /* Style for input fields */
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="url"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 3px solid #ccc; /* Increased border thickness */
+      border-radius: 4px;
+    }
+
+    /* Style for submit button */
+    button[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
   </style>
 </head>
 
 <body>
-
   <!-- Sidebar -->
   <div class="sidebar">
     <h4>User Dashboard</h4>
@@ -145,10 +234,9 @@
 
   <!-- Main Content -->
   <div class="content">
-
     <!-- Submit Proposal Form -->
     <div id="submitProposal" class="tab-content active-tab">
-      <h2>Submit Your Startup Idea</h2>
+      <h2 style="text-align: center;">Submit Your Startup Idea</h2>
       <form id="proposalForm">
         <label>Full Name:</label>
         <input type="text" id="fullName" class="form-control" required>
@@ -162,7 +250,7 @@
         <label>Idea Description:</label>
         <textarea id="ideaDescription" class="form-control" rows="3" required></textarea>
 
-        <label>Investment Amount ($):</label>
+        <label>Investment Amount (₹):</label>
         <input type="number" id="investmentAmount" class="form-control" required>
 
         <label>Pitch Video URL:</label>
@@ -183,7 +271,6 @@
         <p>Loading proposals...</p> <!-- Placeholder while fetching -->
       </div>
     </div>
-
   </div>
 
   <!-- JavaScript -->
@@ -286,8 +373,6 @@
       return "<span class='badge badge-pending'>⏳ Pending</span>";
     }
 
-
-
     function showTab(tabId) {
       document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active-tab'));
       document.getElementById(tabId).classList.add('active-tab');
@@ -300,7 +385,6 @@
       window.location.href = "login.html";
     }
   </script>
-
 </body>
 
 </html>
