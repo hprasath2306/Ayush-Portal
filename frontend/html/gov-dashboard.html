@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const proposalsContainer = document.getElementById("proposals-container");
 
     try {
-        const response = await fetch("https://ayush-portal-y6fk.onrender.com/proposals/getAll", {
+        const response = await fetch("http://localhost:5000/proposals/getAll", {
             headers: { "Authorization": `Bearer ${token}` }
         });
 
@@ -67,7 +67,7 @@ async function updateProposalStatus(proposalId, status) {
     const token = localStorage.getItem("token");
 
     try {
-        const response = await fetch(`https://ayush-portal-y6fk.onrender.com/proposals/${proposalId}/approve`, {
+        const response = await fetch(`http://localhost:5000/proposals/${proposalId}/approve`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
