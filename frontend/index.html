@@ -23,14 +23,16 @@
     <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
     <meta name="theme-color" content="#7952b3">
 
-    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-		
-		<!-- Call back function 2 -->
-		<script type="text/javascript">
-		function googleTranslateElementInit() {
-		  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-		}
-		</script>
+    <!-- Google Translate API -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE },
+          'google_translate_element'
+        );
+      }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <style>
       .bd-placeholder-img {
@@ -45,182 +47,243 @@
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-        
       }
-      .middle-text{
+      .middle-text {
         color: black;
       }
-      .nav-item{
+      .nav-item {
         padding-left: 20px;
         padding-right: 20px;
       }
-      .rounded-circle{
+      .rounded-circle {
         margin-left: -120px;
       }
-      .sub3{
-            list-style-type: none;
-            display:none;
-            position: absolute;
+      .sub3 {
+        list-style-type: none;
+        display: none;
+        position: absolute;
+        border-radius: 3px;
+      }
+      .navbar-nav li:nth-child(3):hover .sub3 {
+        display: block;
+        background-color: white;
+        padding: 10px;
+        color: black;
+        z-index: 1;
+      }
+      .sub3 li a:hover {
+        text-decoration: none;
+        color: blue;
+        background-color: white;
+        transform: scale(1.5);
+        transition: 2s linear infinite;
+      }
+      .sub3 li a {
+        text-decoration: none;
+      }
 
-            border-radius: 3px;
+      .sub4 {
+        list-style-type: none;
+        display: none;
+        position: absolute;
+        border-radius: 3px;
+      }
+      .navbar-nav li:nth-child(4):hover .sub4 {
+        display: block;
+        background-color: white;
+        padding: 10px;
+        color: black;
+        z-index: 1;
+      }
+      .sub4 li a:hover {
+        text-decoration: none;
+        color: blue;
+        background-color: white;
+        transform: scale(1.1);
+        transition: 0.1 ease;
+      }
+      .sub4 li a {
+        text-decoration: none;
+      }
 
+      .sub40 li a {
+        text-decoration: none;
+      }
+
+      .hov {
+        padding: 30px;
+      }
+
+      .hov:hover {
+        background-color: rgba(0, 0, 0, 0.177);
+        animation: ani 1s linear;
+        margin-top: -25px;
+        transition-duration: 1s;
+      }
+
+      .btn {
+        border: none;
+        font-weight: 600;
+        color: black;
+        box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.177);
+        background-image: linear-gradient(45deg, green, lightgreen, green);
+      }
+      .btn:hover {
+        transition-duration: 1s;
+        background-image: linear-gradient(45deg, lightgreen, green, lightgreen);
+      }
+      @media (max-width: 400px) {
+        #i {
+          height: 300px;
+          width: 350px;
         }
-        .navbar-nav li:nth-child(3):hover .sub3{
-            display: block;
-            background-color: white;
-            padding: 10px;
-            color: black;
-            z-index: 1;
-        }
-        .sub3 li a:hover{
-            text-decoration: none;
-            color: blue;
-            background-color: white;
-            transform: scale(1.5);
-            transition: 2s linear infinite;      
-        }
-        .sub3 li a{
-            text-decoration: none;
-        }
-      
-        .sub4{
-            list-style-type: none;
-            display:none;
-            position: absolute;
-            border-radius: 3px;
-        }
-        .navbar-nav li:nth-child(4):hover .sub4{
-            display: block;
-            background-color: white;
-            padding: 10px;
-            color: black;
-            z-index: 1;
-        }
-        .sub4 li a:hover{
-            text-decoration: none;
-            color:blue;
-            background-color: white;
-            transform: scale(1.1);
-            transition: 0.1 ease;
-        }
-        .sub4 li a{
-            text-decoration: none;
-        }
-        
-        .sub40 li a{
-            text-decoration: none;
-        }
-        
-            
-        .hov{
-          padding: 30px;
-        }       
-        
-        
-        .hov:hover{
-          background-color: rgba(0, 0, 0, 0.177);
-          animation: ani 1s linear;
-          margin-top: -25px;
-          transition-duration: 1s;
-        }
-        
-        .btn{
-          border: none;
-          font-weight: 600;
-          color: black;
-          box-shadow: 0.5px 0.5px 10px rgba(0, 0, 0, 0.177);
-          background-image: linear-gradient(45deg,green,lightgreen,green);
-        }
-        .btn:hover
-        {
-          transition-duration: 1s;
-          background-image: linear-gradient(45deg,lightgreen,green,lightgreen);
-        }
-        @media (max-width:400px) {
-          #i{
-            height: 300px;
-            width: 350px;
-          }
-        }
-        .nav-item{
-          padding-left: 0;
-          padding-right: 10;
-          padding-top: 3px;
-          padding-bottom: 3px;
-        }
-        .gt{
-          margin-top: 10px;
-        }
+      }
+      .nav-item {
+        padding-left: 0;
+        padding-right: 10;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      .gt {
+        margin-top: 10px;
+      }
     </style>
 
-    
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
   </head>
   <body>
-    
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#" style="font-weight: bold;">AYUSH INDIA</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#aboutus">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#">Schemes</a>
-            <ul class="sub3" >
-              <li><a href="#CSecS" style="color: black;">Central Sector Schemes</a></li>
-              <li><a href="#CSpnS" style="color: black;">Centrally Sponsored Schemes</a></li>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="font-weight: bold;">AYUSH INDIA</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#aboutus">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Schemes</a>
+                <ul class="sub3">
+                  <li><a href="#CSecS" style="color: black;">Central Sector Schemes</a></li>
+                  <li><a href="#CSpnS" style="color: black;">Centrally Sponsored Schemes</a></li>
+                  <!--<style>
+                    .sub3 li a {
+                        display: block;
+                        padding: 10px 15px;
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    .sub3 li a:hover {
+                        background-color: rgba(17, 227, 150, 0.3); /* Blue background */
+                        border-radius: 12px;
+                        box-shadow: 4px 0px 10px rgba(10, 153, 86, 0.5); /* Horizontal shadow */
+                    }
+                  </style>-->
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ayush Login</a>
+                <ul class="sub4">
+                  <li><a href="html/inv and st.html" style="color: black;">Investors</a></li>
+                  <li><a href="html/gov.html" style="color: black;">Government agencies</a></li>
+                  <li><a href="html/p.html" style="color: black;">Public users</a></li>
+                  <!--<style>
+                    .sub4 li a {
+                        display: block;
+                        padding: 10px 15px;
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    .sub4 li a:hover {
+                        background-color: rgba(17, 227, 150, 0.3); /* Blue background */
+                        border-radius: 12px;
+                        box-shadow: 4px 0px 10px rgba(10, 153, 86, 0.5); /* Horizontal shadow */
+                    }
+                  </style>-->
+                </ul>
+              </li>
+              <style>
+                /* Common styles for sub3 and sub4 */
+                .sub3, .sub4 {
+                  list-style-type: none;
+                  display: none;
+                  position: absolute;
+                  background-color: white;
+                  border-radius: 8px;
+                  padding: 0; /* Remove extra padding */
+                  margin: 0; /* Remove default margin */
+                  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                  width: max-content; /* Ensure dropdown width is based on content */
+                  z-index: 10; /* Ensure it appears above other elements */
+                }
+              
+                /* Show dropdown on hover */
+                .nav-item:hover .sub3,
+                .nav-item:hover .sub4 {
+                  display: block;
+                }
+              
+                /* Styles for dropdown links */
+                .sub3 li a, .sub4 li a {
+                  display: block;
+                  padding: 10px 15px;
+                  text-decoration: none;
+                  color: black;
+                  border-radius: 8px; /* Consistent border radius */
+                  transition: background-color 0.3s ease; /* Smooth hover effect */
+                }
+              
+                /* Hover effect for dropdown links */
+                .sub3 li a:hover, .sub4 li a:hover {
+                  background-color: rgba(17, 227, 150, 0.3); /* Light green background */
+                  text-decoration: none; /* Prevent underline */
+                  color: black; /* Ensure text color remains consistent */
+                }
+              </style>
+              <li class="nav-item">
+                <a class="nav-link" href="html/dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="html/resource.html">Resource</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../images/map_page-0001.jpg">Highlights</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../Exercise-And-Yoga-Tracker-master/aryoga.html">AR Yoga</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://ayush.com/">Products</a>
+              </li>
+              <li>
+                <div id="google_translate_element" class="gt"></div>
+              </li>
             </ul>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ayush Login</a>
-              <ul class="sub4" >
-                <li><a href="html/inv and st.html" style="color: black;">Investors</a></li>
-                  <!-- <ul class="sub40" style="list-style-type: disc;">
-                    <li><a href="ayushreg.html" style="color: black;">Startup</a></li>
-                    <li><a href="inv and st.html" style="color: black;">Others</a></li>
-                  </ul> -->
-                <li><a href="html/gov.html" style="color: black;">Government agencies</a></li>
-                <li><a href="html/p.html" style="color: black;">Public users</a></li>
-              </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="html/dashboard.html">Dahboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="html/resource.html">Resource</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../images/map_page-0001.jpg">Highlights</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../Exercise-And-Yoga-Tracker-master/aryoga.html">AR Yoga</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://ayush.com/">Products</a>
-          </li>
-          <li>
-            <div id="google_translate_element" class="gt"></div>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit" style="text-decoration-color: #000000;">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-</header>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" style="text-decoration-color: #000000;">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
 
 <main>
 
